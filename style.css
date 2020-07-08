@@ -8,20 +8,19 @@ html{
   font-size: 100%;
 }
 
-@media (min-width: 420px) { html {font-size: 0.6rem;} }
 @media (min-width: 640px) { html {font-size: 0.8rem;} }
 @media (min-width: 960px) { html {font-size: 1.0rem;} }
 @media (min-width: 1100px) { html {font-size: 1.2rem;} }
 
 /* Tablet Landscape */
 @media screen and (max-width: 1060px) {
-  #container { width: 75%; }
+  #container { width: 80%; }
   #nav { width: 100%; margin: 0; }
 }
 
 /* Tablet Portrait*/
 @media screen and (max-width: 768px) {
-  #container { width: 85%; }
+  #container { width: 90%; }
   #nav { width: 100%; margin: 0; border: none;}
 }
 
