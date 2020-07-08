@@ -1,0 +1,160 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+
+/* Responsive Website */
+html{
+  font-size: 100%;
+}
+
+@media (min-width: 420px) { html {font-size: 0.6rem;} }
+@media (min-width: 640px) { html {font-size: 0.8rem;} }
+@media (min-width: 960px) { html {font-size: 1.0rem;} }
+@media (min-width: 1100px) { html {font-size: 1.2rem;} }
+
+/* Tablet Landscape */
+@media screen and (max-width: 1060px) {
+  #container { width: 75%; }
+  #nav { width: 100%; margin: 0; }
+}
+
+/* Tablet Portrait*/
+@media screen and (max-width: 768px) {
+  #container { width: 85%; }
+  #nav { width: 100%; margin: 0; border: none;}
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 40%;
+  padding-top: 22.5px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  { max-width: 100%; height: auto; }
+}
+
+
+/* Navigation Bar */
+#nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #07031a;
+  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0.5%;
+  padding-left: 3%;
+  margin: 0;
+  margin-left: -10px;
+  margin-top: 0;
+}
+
+#nav a{
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin: 0;
+  display: block;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: white;
+  font-family: 'MuseoModerno', cursive;
+}
+
+#nav ul{
+  top: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#nav li.link{
+  margin: 0;
+  margin-right: 4%;
+  padding: 0;
+  padding-left: 0.2%;
+  padding-right: 0.2%;
+  display: inline;
+  float: left;
+}
+
+#nav li.active{
+  background-color: #94caff;
+}
+
+#nav a.active{
+  color: black;
+}
+
+#nav a:hover{
+  color: white;
+}
+
+#nav li.link:hover{
+  background-color: #4f8a8b;
+}
+
+#nav img{
+  height: 1.8rem;
+}
+
+#nav li.logo{
+  margin-right: 4%;
+  margin-top: -5px;
+  margin-bottom: -20px;
+  padding: 0;
+  padding-left: 1%;
+  padding-right: 1%;
+  display: inline;
+  float: left;
+  background-color: white;
+}
+
+
+body{
+  background-color: #ffc4a3;
+  margin-top: 80px;
+}
+
+#container{
+  background-color: #f4f6ff;
+  margin: 2%;
+  padding: 1.5%;
+}
+
+#header{
+  font-size: 1.05rem;
+  margin-top: -0.75rem;
+  color: #ff4301;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#content{
+  font-size: 1rem;
+  /**font-family: ;**/
+}
+
+.subhead{
+  font-size: 1.2rem;
+
+}
+
+hr.blue {
+  margin-top: -1rem;
+  border-width: thin;
+  border-color: blue;
+  border-style: solid;
+}
