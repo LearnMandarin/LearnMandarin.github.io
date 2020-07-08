@@ -14,13 +14,13 @@ html{
 
 /* Tablet Landscape */
 @media screen and (max-width: 1060px) {
-  #container { width: 85%; }
+  #container { width: 80%; }
   #nav { width: 100%; margin: 0; }
 }
 
 /* Tablet Portrait*/
 @media screen and (max-width: 768px) {
-  #container { width: 100%; }
+  #container { width: 90%; }
   #nav { width: 100%; margin: 0; border: none;}
 }
 
