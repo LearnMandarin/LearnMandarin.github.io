@@ -2,25 +2,52 @@
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
+/* Scrollbar */
+/* Firefox */
+* {
+  scrollbar-width: 12px;
+  scrollbar-color: #0576ff #f5ffff;
+}
+
+/* Chrome */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  margin-top: -4px;
+  background: #f5ffff;
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #0576ff;
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #3691ff;
+}
+
 
 /* Responsive Website */
 html{
   font-size: 100%;
 }
 
-@media (min-width: 500px) { html {font-size: 5rem;} }
+@media (min-width: 500px) { html {font-size: 1.5rem;} }
 @media (min-width: 860px) { html {font-size: 1.2rem;} }
 @media (min-width: 1100px) { html {font-size: 1.1rem;} }
 
 /* Tablet Landscape */
 @media screen and (max-width: 1060px) {
-  #container { width: 80%; }
+  #container { width: 80%; margin: 100px;}
   #nav { width: 100%; margin: 0; }
 }
 
 /* Tablet Portrait*/
 @media screen and (max-width: 560px) {
-  #container { width: 95%; }
+  #container { width: 90%; margin: 50px;}
   #nav { width: 100%; margin: 0; border: none;}
 }
 
@@ -58,6 +85,7 @@ img {
   margin: 0;
   margin-left: -10px;
   margin-top: 0;
+  z-index: 1;
 }
 
 #nav a{
@@ -78,6 +106,11 @@ img {
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+
+#nav li.link{
+  color: white;
+  box-shadow: 1px 0px;
 }
 
 #nav li.link{
@@ -103,11 +136,12 @@ img {
 }
 
 #nav li.link:hover{
+  box-shadow: 4px 0px;
   background-color: #4f8a8b;
 }
 
 #nav img{
-  height: 1.8rem;
+  height: 32px;
 }
 
 #nav li.logo{
@@ -125,35 +159,135 @@ img {
 
 body{
   background-color: #ffc4a3;
-  margin-top: 80px;
-}
-
-#container{
-  background-color: #f4f6ff;
-  margin: 2%;
-  padding: 1.5%;
+  margin-bottom: -10px;
 }
 
 #header{
-  font-size: 1.05rem;
-  margin-top: -0.75rem;
+  font-size: 16px;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
   color: #ff4301;
   font-family: 'Noto Sans', sans-serif;
 }
 
-#content{
-  font-size: 1rem;
-  /**font-family: ;**/
+#container{
+  background-color: #f4f6ff;
+  margin: 20px;
+  margin-top: 60px;
+  margin-bottom: 0;
+  padding: 20px;
 }
 
-.subhead{
-  font-size: 1.2rem;
+#content{
+  margin-top: 50px;
+  margin-left: 12%;
+  margin-right: 12%;
+}
 
+#intro{
+  position: relative;
+  text-align: left;
+  display: block;
+  padding-bottom: 300px;
+}
+
+#pagenav{
+  position: fixed;
+  border-style: solid;
+  border-width: thin;
+  border-color: teal;
+}
+
+@media (min-width: 500px) { #pagenav ul {list-style-image: url(images/pagenav-list-style3.png);} }
+@media (min-width: 860px) { #pagenav ul {list-style-image: url(images/pagenav-list-style2.png);} }
+@media (min-width: 1100px) { #pagenav ul {list-style-image: url(images/pagenav-list-style1.png);} }
+
+@media (min-width: 500px) { #pagenav li {padding: 0; margin-left: -0.7rem;} }
+@media (min-width: 860px) { #pagenav li {padding-right: 0.3rem; margin-left: -0.3rem;} }
+@media (min-width: 1100px) { #pagenav li {padding-right: 0.6rem; margin-left: -0.2rem;} }
+
+@media (min-width: 500px) { #pagenav {display: none;} }
+@media (min-width: 850px) { #pagenav {display: none;} }
+@media (min-width: 950px) { #pagenav {display: block;} }
+
+#pagenav li{
+  padding-bottom: 0.75rem;
+}
+
+#footer {
+  position: inherit;
+  width: 100%;
+  top: 0;
+  background-color: blue;
+  padding: 20px;
+  padding-top: 0;
+  padding-bottom: 0.5%;
+  margin: 0;
+  margin-left: -20px;
+  margin-top: 0;
+  margin-bottom: -20px;
+  border-bottom-style: solid;
+  border-bottom-width: 25px;
+  border-color: black;
+  z-index: 1;
+}
+
+#footer ul{
+  top: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#footer img{
+  margin-bottom: -20px;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  display: inline;
+  background-color: white;
+  height: 40px;
+}
+
+#footer li{
+  margin: 0;
+  margin-right: 4%;
+  padding: 0;
+  padding-left: 1%;
+  padding-right: 2%;
+  display: inline;
+  float: left;
+}
+
+#footer a{
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin: 0;
+  display: block;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: white;
+  font-family: 'MuseoModerno', cursive;
+}
+
+.head{
+  font-size: 1.2rem;
 }
 
 hr.blue {
   margin-top: -1rem;
-  border-width: thin;
+  border-width: 0.25rem;
+  background-color: blue;
   border-color: blue;
   border-style: solid;
+}
+
+.p{
+  padding-bottom: 25px;
+  font-size: 18px;
 }
