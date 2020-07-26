@@ -230,7 +230,7 @@ body{
   position: inherit;
   width: 100%;
   top: 0;
-  background-color: blue;
+  background-color: black;
   padding: 14px;
   padding-top: 0;
   padding-bottom: 4px;
@@ -239,7 +239,7 @@ body{
   margin-top: 0;
   margin-bottom: -20px;
   border-bottom-style: solid;
-  border-bottom-width: 25px;
+  border-bottom-width: 10px;
   border-color: black;
   z-index: 1;
 }
@@ -252,7 +252,7 @@ body{
   overflow: hidden;
 }
 
-#footer img{
+#footer img.logo{
   margin-bottom: -20px;
   padding: 10px;
   padding-top: 5px;
@@ -262,17 +262,20 @@ body{
   height: 40px;
 }
 
+#footer img.social{
+  height: 40px;
+}
+
 #footer li{
   margin: 0;
-  margin-right: 4%;
   padding: 0;
   padding-left: 1%;
-  padding-right: 2%;
+  padding-right: 3%;
   display: inline;
   float: left;
 }
 
-#footer a{
+#footer a, #footer p{
   text-align: center;
   text-decoration: none;
   display: block;
