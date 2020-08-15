@@ -1,12 +1,14 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap');
 
 /* Scrollbar */
 /* Firefox */
 * {
   scrollbar-width: 12px;
-  scrollbar-color: #0576ff #f5ffff;
+  scrollbar-color: #ff4d4a #f5ffff;
 }
 
 /* Chrome */
@@ -21,12 +23,12 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #0576ff;
+  background: #ff4d4a;
   border-radius: 20px;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: #3691ff;
+  background: #ff6e6e;
 }
 
 
@@ -35,19 +37,19 @@ html{
   font-size: 100%;
 }
 
-@media (min-width: 500px) { html {font-size: 1.5rem;} }
+@media (min-width: 500px) { html {font-size: 1.3rem;} }
 @media (min-width: 860px) { html {font-size: 1.2rem;} }
 @media (min-width: 1100px) { html {font-size: 1.1rem;} }
 
 /* Tablet Landscape */
 @media screen and (max-width: 1060px) {
-  #container { width: 80%; }
+  #container { width: 92%; }
   #nav { width: 100%; margin: 0; }
 }
 
 /* Tablet Portrait*/
 @media screen and (max-width: 560px) {
-  #container { width: 90%; }
+  #container { width: 88%; }
   #nav { width: 100%; margin: 0; border: none; }
   #pagenav { display: none; }
 }
@@ -90,7 +92,7 @@ img {
   z-index: 1;
 }
 
-#nav a{
+#nav a.link{
   text-align: center;
   text-decoration: none;
   display: block;
@@ -143,32 +145,48 @@ img {
 }
 
 #nav img{
-  height: 32px;
+  margin-top: 5px;
+  height: 60px;
 }
 
 #nav li.logo{
   margin-right: 4%;
-  margin-top: -5px;
-  margin-bottom: -20px;
+  margin-top: -10px;
+  margin-bottom: -22px;
   padding: 0;
-  padding-left: 1%;
-  padding-right: 1%;
   display: inline;
   float: left;
   background-color: white;
 }
 
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   background-color: #f4f6ff;
   margin-bottom: -10px;
+}
+
+#banner img{
+  width: 75%;
+  margin-left: 125px;
+  align-self: center;
+}
+
+#banner{
+  margin-left: -0.8%;
+  width: 101.4%;
+  margin-top: 50px;
+  background-color: black;
 }
 
 #header{
   font-size: 16px;
   margin-left: -8px;
   margin-right: -8px;
-  margin-top: 20px;
+  margin-top: -50px;
   padding-left: 30px;
   padding-right: 30px;
   color: #ff4301;
@@ -189,6 +207,7 @@ body{
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 23%;
+  padding-bottom: 150px;
 }
 
 #intro{
@@ -198,12 +217,20 @@ body{
   padding-bottom: 100px;
 }
 
-#pagenav{
-  position: fixed;
+#intro img{
+  width: 85%;
 }
 
-@media (min-width: 860px) { #pagenav ul {list-style-image: url(images/pagenav-list-style-small.png);} }
-@media (min-width: 1100px) { #pagenav ul {list-style-image: url(images/pagenav-list-style-large.png);} }
+#pagenav{
+  position: sticky;
+  top: 75px;
+  float: left;
+  margin-left: 7px;
+}
+
+#pagenav ul{
+  list-style-image: url(images/pagenav-list-style.png);
+}
 
 @media (min-width: 860px) { #pagenav li {padding-right: 0.3rem; margin-left: -2.5rem;} }
 @media (min-width: 1100px) { #pagenav li {padding-right: 0.6rem; margin-left: -1.5rem;} }
@@ -218,18 +245,26 @@ body{
 
 #pagenav a{
   text-decoration: none;
-  color: darkblue;
+  color: black;
   font-size: 14px;
+  font-style: oblique;
+  text-decoration: underline;
+}
+
+#pagenav a:hover{
+  color: blue;
+  text-decoration-color: blue;
 }
 
 #pagenav h4{
+  color: #2511ff;
   margin-bottom: -10px;
+  margin-left: 15px;
 }
 
 #footer {
-  position: inherit;
+  position: relative;
   width: 100%;
-  top: 0;
   background-color: black;
   padding: 14px;
   padding-top: 0;
@@ -258,8 +293,8 @@ body{
   padding-top: 5px;
   padding-bottom: 15px;
   display: inline;
-  background-color: white;
-  height: 40px;
+  background-color: black;
+  height: 50px;
 }
 
 #footer img.social{
@@ -289,6 +324,7 @@ body{
 
 .head{
   font-size: 1.2rem;
+  font-family: 'Philosopher', sans-serif;
 }
 
 hr.blue {
@@ -302,4 +338,25 @@ hr.blue {
 .p{
   padding-bottom: 25px;
   font-size: 18px;
+  font-family: 'Josefin Slab', serif;
+  line-height: 1.5;
+}
+
+.navlink{
+  text-decoration: none;
+  color: red;
+}
+
+.buttonlink{
+  position: absolute;
+  left: 30%;
+  border: none;
+  font-size: 20px;
+  font-family: monospace;
+  font-weight: bold;
+  background-color: #3080ff;
+  padding: 15px 25px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
 }
