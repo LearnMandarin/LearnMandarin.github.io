@@ -67,14 +67,17 @@ html{
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 75%;
   height: 100%;
 }
 
-img {
-  { max-width: 100%; height: auto; }
+@media (min-width: 500px){
+  img.image { width: 85%; }
 }
 
+@media (min-width: 800px){
+  img.image { width: 60%; }
+}
 
 /* Navigation Bar */
 #nav {
@@ -113,11 +116,6 @@ img {
 }
 
 #nav li.link{
-  color: white;
-  box-shadow: 1px 0px;
-}
-
-#nav li.link{
   margin: 0;
   margin-right: 4%;
   padding: 0;
@@ -125,6 +123,8 @@ img {
   padding-right: 0.2%;
   display: inline;
   float: left;
+  color: white;
+  box-shadow: 1px 0px;
 }
 
 #nav li.active{
@@ -165,7 +165,7 @@ html{
 }
 
 body{
-  background-color: #f4f6ff;
+  background: linear-gradient(90deg, #f2f2f2, white, #f2f2f2);
   margin-bottom: -10px;
 }
 
@@ -186,29 +186,45 @@ body{
   font-size: 16px;
   margin-left: -8px;
   margin-right: -8px;
-  margin-top: -50px;
+  margin-top: -80px;
   padding-left: 30px;
   padding-right: 30px;
-  color: #ff4301;
+}
+
+#header h1{
+  background-color: #41bdff;
+  padding: 10px;
+  color: #ff2243;
   font-family: 'Noto Sans', sans-serif;
+  margin-bottom: 10px;
 }
 
 #container{
-  background-color: #f4f6ff;
   margin: 10px;
   margin-top: 60px;
   margin-bottom: 0;
   padding: 20px;
 }
 
-#content{
+@media (min-width: 500px) {
+  #content {
   margin-top: 50px;
   margin: 10%;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 23%;
+  margin-left: 10%;
   padding-bottom: 150px;
-}
+}}
+
+@media (min-width: 1060px) {
+  #content {
+  margin-top: 50px;
+  margin: 10%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 20%;
+  padding-bottom: 150px;
+}}
 
 #intro{
   position: relative;
@@ -222,14 +238,15 @@ body{
 }
 
 #pagenav{
+  margin-top: 10px;
   position: sticky;
-  top: 75px;
+  top: 140px;
   float: left;
   margin-left: 7px;
 }
 
 #pagenav ul{
-  list-style-image: url(images/pagenav-list-style.png);
+  list-style: none;
 }
 
 @media (min-width: 860px) { #pagenav li {padding-right: 0.3rem; margin-left: -2.5rem;} }
@@ -237,28 +254,36 @@ body{
 
 @media (min-width: 520px) { #pagenav {display:none;} }
 @media (min-width: 860px) { #pagenav {display: none;} }
-@media (min-width: 950px) { #pagenav {display: block;} }
+@media (min-width: 1060px) { #pagenav {display: block;} }
 
-#pagenav li{
+#pagenav li a{
   padding-bottom: 0.75rem;
+  background-color: #41bdff;
+  padding: 6px 6px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: white;
+  width: 100%;
 }
 
 #pagenav a{
-  text-decoration: none;
-  color: black;
   font-size: 14px;
-  font-style: oblique;
-  text-decoration: underline;
+  font-family: serif;
+  text-decoration: none;
+  background-color: #41bdff;
+  padding: 6px 6px;
+  display: inline-block;
+  color: white;
 }
 
 #pagenav a:hover{
-  color: blue;
+  color: black;
   text-decoration-color: blue;
 }
 
 #pagenav h4{
-  color: #2511ff;
-  margin-bottom: -10px;
+  color: #07031a;
+  margin-bottom: 20px;
   margin-left: 15px;
 }
 
@@ -337,7 +362,7 @@ hr.blue {
 
 .p{
   padding-bottom: 25px;
-  font-size: 18px;
+  font-size: 1.15rem;
   font-family: 'Josefin Slab', serif;
   line-height: 1.5;
 }
@@ -359,4 +384,50 @@ hr.blue {
   display: inline-block;
   color: white;
   text-decoration: none;
+}
+
+h3.lesson{
+  font-size: 1.5rem;
+  font-family: 'Philosopher', sans-serif;
+}
+
+li.lesson{
+  list-style: none;
+  margin: 6px;
+}
+
+li.lesson h4{
+  font-size: 1.75rem;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 900;
+}
+
+li.lesson p{
+  font-size: 1.3rem;
+  font-family: 'Josefin Slab', serif;
+}
+
+.italic{
+  font-size: 1.2rem;
+  color: red;
+}
+
+.new{
+  font-size: 1rem;
+  font-family: 'Philosopher', sans-serif;
+  font-style: italic;
+  color: #ff2243;
+}
+
+.resources li{
+  list-style: square;
+  line-height: 2.5rem;
+}
+
+.resources a{
+  font-size: 1.1rem;
+  font-family: 'Josefin Slab', serif;
+  text-decoration: underline;
+  font-weight: 500;
+  color: red;
 }
